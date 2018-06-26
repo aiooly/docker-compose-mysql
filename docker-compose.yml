@@ -1,0 +1,12 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - './mysqlconf:/etc/mysql/conf.d/:rw'
+      - './mysqldata:/var/lib/mysql:rw'
+    ports:
+      - '3306:3306'    
+
